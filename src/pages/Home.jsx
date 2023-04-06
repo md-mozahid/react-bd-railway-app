@@ -7,7 +7,7 @@ import imageSearch from '../assets/img/search.svg'
 import imageSelect from '../assets/img/select.svg'
 import image from '../assets/img/train-illustration-for-train-1.jpg'
 
-export default function HeroSection() {
+export default function Home() {
   const [selectedDate, setSelectedDate] = useState(null)
   return (
     <>

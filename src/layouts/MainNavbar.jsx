@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Logo from '../assets/img/bangladesh-railway.png'
 // import { MdAccountCircle } from "react-icons/md";
 
@@ -14,10 +15,11 @@ const MainNavbar = () => {
             </h1>
           </div>
           <div className="space-x-5">
-            <a href="">Home</a>
-            <a href="">Verify Ticket</a>
-            <a href="">Train Information</a>
-            <a href="">Contact Us</a>
+            <Link to='home'>Home</Link>
+            <Link to='login'>Login</Link>
+            <Link to='register'>Register</Link>
+            <Link to='information'>Train Information</Link>
+            <Link to='contact'>Contact Us</Link>
             <button className="rounded bg-slate-100 w-52 px-3 py-2">
               Md Mozahid
               {/* <div>

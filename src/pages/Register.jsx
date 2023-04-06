@@ -5,7 +5,7 @@ import Logo from '../assets/img/verify-nid-illustration.svg'
 const Register = () => {
   const [selectedDate, setSelectedDate] = useState(null)
   return (
-    <div className="bg-zinc-200 h-screen">
+    <div className="bg-zinc-200 pb-10">
       <div className="mx-auto max-w-6xl">
         <h1 className="text-2xl py-5">Registration</h1>
         <hr className='py-5'/>
