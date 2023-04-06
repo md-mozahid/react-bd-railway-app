@@ -1,14 +1,14 @@
-import React, { useState } from "react";
-import image from "../assets/img/train-illustration-for-train-1.jpg";
-import imageSearch from "../assets/img/search.svg";
-import imageSelect from "../assets/img/select.svg";
-import imagePay from "../assets/img/pay.svg";
-import imageInstruction from "../assets/img/instruction-section.png";
-import ReactDatePicker from "react-datepicker";
-import { FaArrowAltCircleRight } from "react-icons/fa";
+import React, { useState } from 'react'
+import ReactDatePicker from 'react-datepicker'
+import { FaArrowAltCircleRight } from 'react-icons/fa'
+import imageInstruction from '../assets/img/instruction-section.png'
+import imagePay from '../assets/img/pay.svg'
+import imageSearch from '../assets/img/search.svg'
+import imageSelect from '../assets/img/select.svg'
+import image from '../assets/img/train-illustration-for-train-1.jpg'
 
 export default function HeroSection() {
-  const [selectedDate, setSelectedDate] = useState(null);
+  const [selectedDate, setSelectedDate] = useState(null)
   return (
     <>
       <div className="bg-slate-200 ">
@@ -122,7 +122,7 @@ export default function HeroSection() {
 
           <hr className="py-10" />
 
-          <div className="grid grid-cols-2">
+          <div className="grid grid-cols-2 py-10">
             <div>
               <img src={imageInstruction} alt="Instruction" />
             </div>
@@ -200,5 +200,5 @@ export default function HeroSection() {
         </div>
       </div>
     </>
-  );
+  )
 }

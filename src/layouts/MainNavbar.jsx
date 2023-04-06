@@ -1,5 +1,5 @@
-import React from "react";
-import Logo from "../assets/img/bangladesh-railway.png";
+import React from 'react'
+import Logo from '../assets/img/bangladesh-railway.png'
 // import { MdAccountCircle } from "react-icons/md";
 
 const MainNavbar = () => {
@@ -19,7 +19,7 @@ const MainNavbar = () => {
             <a href="">Train Information</a>
             <a href="">Contact Us</a>
             <button className="rounded bg-slate-100 w-52 px-3 py-2">
-                Md Mozahid
+              Md Mozahid
               {/* <div>
                 <h2>User Name</h2>
                 <div>
@@ -54,7 +54,7 @@ const MainNavbar = () => {
         </nav>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default MainNavbar;
+export default MainNavbar
