@@ -70,7 +70,7 @@ export default function Home() {
             </h1>
             <div className="grid grid-cols-2 gap-10">
               <div>
-                <div className="bg-green-300 flex justify-around items-center py-3 rounded-t-md">
+                <div className="bg-gradient-to-r from-cyan-500 to-blue-500 flex justify-around items-center py-3 rounded-t-md">
                   <p>Available Tickets*</p>
                   <p>06/04/2023</p>
                 </div>
@@ -85,7 +85,7 @@ export default function Home() {
                 <div className="bg-slate-300 flex justify-around items-center py-3 rounded-t-md">
                   <p>Logged In User</p>
                 </div>
-                <div className="bg-green-300 flex justify-around items-center py-3 rounded-b-md">
+                <div className="bg-gradient-to-r from-cyan-500 to-blue-500 flex justify-around items-center py-3 rounded-b-md">
                   <p>Web & App</p>
                   <h1 className="text-2xl">1182853</h1>
                 </div>

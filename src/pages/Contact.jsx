@@ -6,7 +6,7 @@ const Contact = () => {
       <div className="container mx-auto max-w-6xl py-10">
         <h1>Contact Us</h1>
         <hr />
-        <div className="w-2/4 mx-auto py-10">
+        <div className="w-2/4 mx-auto py-10 divide-y divide-blue-200">
           <small>
             For refund of unsuccessful purchases and card <br /> charging issues
           </small>
