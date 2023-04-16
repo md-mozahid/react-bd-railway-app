@@ -1,16 +1,17 @@
 import React from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import MainNavbar from './layouts/MainNavbar'
+import { Route, Routes } from 'react-router-dom'
 import Footer from './layouts/Footer'
+import MainNavbar from './layouts/MainNavbar'
 import Contact from './pages/Contact'
 import Home from './pages/Home'
 import Login from './pages/Login'
 import Register from './pages/Register'
 import TrainInformation from './pages/TrainInformation'
+import { ToastContainer } from 'react-toastify'
 
 function App() {
   return (
-    <BrowserRouter>
+    <>
       <MainNavbar />
       <Routes>
         <Route index element={<Home />} />
@@ -21,7 +22,8 @@ function App() {
         <Route path="contact" element={<Contact />} />
       </Routes>
       <Footer />
-    </BrowserRouter>
+      <ToastContainer autoClose={1000} hideProgressBar="true" theme="colored" />
+    </>
   )
 }
 

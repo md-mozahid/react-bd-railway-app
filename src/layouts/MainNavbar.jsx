@@ -7,7 +7,7 @@ const MainNavbar = () => {
   return (
     <>
       <div className="bg-gray-500">
-        <nav className="max-w-6xl mx-auto flex justify-between items-center px-4 py-3 text-lg ">
+        <nav className="max-w-6xl mx-auto flex justify-between items-center px-4 py-2 text-lg ">
           <div className="flex items-center w-96">
             <img className="h-16" src={Logo} alt="" />
             <h1 className="text-xl ml-2 font-semibold">
