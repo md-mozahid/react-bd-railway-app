@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Logo from '../assets/img/bangladesh-railway.png'
 // import LogoBg from '../assets/img/login-page-bg.svg'
 
@@ -29,7 +30,7 @@ const Login = () => {
               <button className="btn-primary btn-fw">LOGIN</button>
               <p className="text-center text-gray-400 pt-3">OR</p>
               <p className="text-center text-green-700 underline ">
-                <a href="">REGISTER</a>
+                <Link to="/register">REGISTER</Link>
               </p>
             </div>
           </form>

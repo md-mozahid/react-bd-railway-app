@@ -28,7 +28,7 @@ const Footer = () => {
           <div>
             <small className="font-semibold">Powered by</small>
             <p className="text-2xl text-green-800 font-semibold">
-              Shohoz-Synesis-Vincen JV
+              React-Next-Strapi-JV
             </p>
           </div>
         </div>

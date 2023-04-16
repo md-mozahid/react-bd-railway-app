@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form'
 import * as yup from 'yup'
 import Logo from '../assets/img/verify-nid-illustration.svg'
 import { AuthContext } from '../contextApi/AuthContext'
+import { Link } from 'react-router-dom'
 
 const schema = yup.object().shape({
   // mobileNumber: yup
@@ -53,20 +54,20 @@ const Register = () => {
     <div className="bg-zinc-200 pb-10">
       <div className="mx-auto max-w-6xl">
         <h1 className="text-2xl py-5">Registration</h1>
-        <hr className="py-5" />
-        <div className="flex flex-col justify-center items-center">
+        <hr className="py-0.5 bg-green-700" />
+        <div className="flex flex-col justify-center items-center pt-10">
           <hr />
           <div className="flex flex-col justify-center items-center w-96 mx-auto">
             <img src={Logo} alt="" />
             <h1 className="text-3xl font-semibold pt-5 pb-3">
               Please Verify Your NID
             </h1>
-            <p className="pb-5">
+            {/* <p className="pb-5">
               Enter the information below to verify and register your NID with
               Bangladesh Railway Ticketing Service If your NID is verified
               through SMS, please use the details used during the SMS
               verification.
-            </p>
+            </p> */}
           </div>
           <div className="bg-zinc-100 w-96 rounded-md p-4 text-center">
             <form onSubmit={handleSubmit(onSubmit)}>
@@ -122,9 +123,9 @@ const Register = () => {
               </button>
 
               <p className="pt-6">
-                <a className="text-green-700 hover:underline" href="">
-                  Already Registered?
-                </a>
+                <Link to="/login" className="text-green-700 hover:underline">
+                   Already Registered?
+                </Link>
               </p>
             </form>
           </div>
