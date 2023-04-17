@@ -53,6 +53,7 @@ const Login = () => {
                 name="email"
                 {...register('email')}
                 placeholder="Enter your mobile number"
+                defaultValue="muzahid@gmail.com"
               />
               {errors.username?.message}
               <input
@@ -61,6 +62,7 @@ const Login = () => {
                 name="password"
                 {...register('password')}
                 placeholder="Enter your password"
+                defaultValue='Aa123@'
               />
               {errors.password?.message}
               <button type="submit" className="btn-primary btn-fw">
