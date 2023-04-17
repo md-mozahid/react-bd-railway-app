@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import {
   MdAccountCircle,
   MdCardTravel,
@@ -9,9 +9,13 @@ import {
 } from 'react-icons/md'
 import { Link } from 'react-router-dom'
 import Logo from '../assets/img/bangladesh-railway.png'
+import { AuthContext } from '../contextApi/AuthContext'
 
 const MainNavbar = () => {
-  const [toggle, setToggle] = useState(true)
+  const [toggle, setToggle] = useState(false)
+  const { logout, login, user } = useContext(AuthContext)
+
+  // console.log(user.username)
   return (
     <>
       <div className="bg-slate-300">
@@ -26,57 +30,72 @@ const MainNavbar = () => {
             <Link className="" to="home">
               Home
             </Link>
-            <Link to="login">Login</Link>
-            <Link to="register">Register</Link>
-            <Link to="information">Train Information</Link>
-            <Link to="contact">Contact Us</Link>
+
+            {!user && (
+              <>
+                <Link to="login">Login</Link>
+                <Link to="register">Register</Link>
+              </>
+            )}
+            {user && (
+              <>
+                <Link to="information">Train Information</Link>
+                <Link to="contact">Contact Us</Link>
+              </>
+            )}
           </div>
+
           <div className="relative">
             <button
               className="rounded bg-slate-100 w-52 px-3 py-2"
               onClick={() => setToggle(!toggle)}>
               {toggle ? 'MUZAHID' : 'MUZAHID'}
             </button>
+
             <div className="absolute">
               {toggle && (
-                <div className="w-72 mt-2 leading-10 bg-gradient-to-r from-cyan-500 to-blue-400 p-5 rounded-sm ">
-                  <h2 className="">Md Muzahid</h2>
-                  <div className="flex items-center content-center gap-4 ">
-                    <i>
+                <div className="w-68 mt-2 leading-10 bg-gradient-to-r from-cyan-500 to-blue-400 px-5 pb-2 rounded-md ">
+                  <h2 className="pt-0 uppercase">
+                  {login ? user.username : 'username'}
+                  </h2>
+                  <div className="flex items-center mx-auto gap-4 ">
+                    <i className="">
                       <MdEmail />
                     </i>
-                    <p>ce.muzahid@gmail.com</p>
+                    <i className="">ce.muzahid@gmail.com</i>
                   </div>
-                  <div className="">
+                  <div className="flex items-center mx-auto gap-4">
                     <i>
                       <MdPhoneIphone />
                     </i>
-                    <p>Phone</p>
+                    <i>Mobile Number</i>
                   </div>
                   <hr />
-                  <div className="">
+                  <div className="flex items-center mx-auto gap-4">
                     <i>
                       <MdAccountCircle />
                     </i>
-                    <p>Profile</p>
+                    <i>Profile</i>
                   </div>
-                  <div>
+                  <div className="flex items-center mx-auto gap-4">
                     <i>
                       <MdCardTravel />
                     </i>
-                    <p>Purchase History</p>
+                    <i>Purchase History</i>
                   </div>
-                  <div>
+                  <div className="flex items-center mx-auto gap-4">
                     <i>
                       <MdPassword />
                     </i>
-                    <p>Update Password</p>
+                    <i>Update Password</i>
                   </div>
-                  <div>
+                  <div className="flex items-center mx-auto gap-4">
                     <i>
                       <MdLogout />
                     </i>
-                    <p>Logout</p>
+                    <Link to="/login" onClick={logout}>
+                      Logout
+                    </Link>
                   </div>
                 </div>
               )}
