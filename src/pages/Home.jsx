@@ -36,7 +36,7 @@ export default function Home() {
               <div className="grid grid-cols-2 gap-10">
                 <div>
                   <label htmlFor="">Date of Journey</label>
-                  <ReactDatePicker
+                  {/* <ReactDatePicker
                     className="inputText"
                     selected={selectedDate}
                     onChange={(date) => setSelectedDate(date)}
@@ -45,7 +45,9 @@ export default function Home() {
                     showYearDropdown
                     scrollableYearDropdown
                     placeholder="Pic a date"
-                  />
+                  /> */}
+
+                  <input className="inputText" type="date" name="" id="" />
                 </div>
                 <div>
                   <label htmlFor="">Choose a Class</label>
